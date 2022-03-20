@@ -65,6 +65,7 @@ type Configuration struct {
 	Verbose        bool     `yaml:"verbose,omitempty"`
 	Debug          bool     `yaml:"debug,omitempty"`
 	CheckOnly      bool     `yaml:"checkonly,omitempty"`
+	SASToken       string   `yaml:"sas_token,omitempty"`
 	AuthUser       string   `yaml:"auth_user,omitempty"`
 	AuthPass       string   `yaml:"auth_pass,omitempty"`
 	TLSAuth        bool     `yaml:"tls_auth,omitempty"`

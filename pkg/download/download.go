@@ -129,6 +129,11 @@ func Get(url string) ([]byte, error) {
 		client = &http.Client{Transport: transport}
 	}
 
+	// Append SAS token if we have one
+	if downloadCfg.SASToken != "" {
+		url = url + "?" + downloadCfg.SASToken
+	}
+
 	// Build the request
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
